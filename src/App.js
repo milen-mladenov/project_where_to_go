@@ -7,19 +7,26 @@ import { BrowsingPage } from './components/browsingPage/BrowsingPage';
 import { UserProfilePage } from './components/userProfilePage/UserProfilePage';
 import { BusinessPage } from './components/businessPage/BusinessPage';
 import { ReservationsPage } from './components/reservationsPage/ReservationsPage';
-
+import { Login } from './components/userControler/Login'
+import { Register } from './components/userControler/Register'
+import { CompanyRegister } from './components/userControler/CompanyRegister'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/browse' element={<BrowsingPage />} />
-        <Route path='/profile' element={<UserProfilePage />} />
-        <Route path='/business' element={<BusinessPage />} />
-        <Route path='/reservations' element={<ReservationsPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/company-register' element={<CompanyRegister />} />
+          <Route path='/browse' element={<BrowsingPage />} />
+          <Route path='/profile' element={<UserProfilePage />} />
+          <Route path='/business' element={<BusinessPage />} />
+          <Route path='/reservations' element={<ReservationsPage />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
