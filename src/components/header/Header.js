@@ -7,10 +7,12 @@ export const Header = () => {
 
     return (
         <header>
-            <div className={styles.logo_section}>
-                <h3>WhereToGo</h3>
-                <img className={styles.logo} src={logo} />
-            </div>
+            <Link to="/">
+                <div className={styles.logo_section}>
+                    <h3 className={styles.name}>WhereToGo</h3>
+                    <img className={styles.logo} src={logo} />
+                </div>
+            </Link>
             <nav className={styles.navigation}>
                 <ul>
                     <Link to="/"><li>Home</li></Link>

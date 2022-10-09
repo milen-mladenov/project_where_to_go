@@ -1,5 +1,6 @@
 import styles from './Establishment.module.css'
-export const Establishment = ({ est }) => {
+import { Link } from 'react-router-dom';
+export const Establishment = ({ est,id }) => {
     const status = false;
     // add calculation to check if the current status is open or closed based on the working hours and current time
 
@@ -27,6 +28,7 @@ export const Establishment = ({ est }) => {
                     }
                 </h3>
             </div>
+            <Link to={`/reservations/${id}`}>Make reservation</Link>
         </article>
     )
 }
