@@ -1,3 +1,28 @@
-h1 {
-    font-size: 80px;
+.title h1 {
+    width: 70%;
+    font-style: oblique;
+    font-size: 30px;
+    margin: 2rem auto;
+}
+
+.title h2,
+.information h3 {
+    width: 65%;
+    margin: .75rem auto;
+}
+
+.information h3 {
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+.information img {
+    max-width: 500px;
+}
+
+@media only screen and (min-width: 900px) {
+
+    .title h1 {
+        font-size: 70px;
+    }
 }

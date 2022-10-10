@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "BarOne",
-        "img": "",
+        "img": "https://cdn.theculturetrip.com/wp-content/uploads/2015/11/drinks-2578446_1280-1024x682.jpg",
         "types": [
             "bar",
             "coctails",
@@ -49,7 +49,7 @@
     {
         "id": 2,
         "name": "BarTwo",
-        "img": "",
+        "img": "https://cdn.theculturetrip.com/wp-content/uploads/2015/11/drinks-2578446_1280-1024x682.jpg",
         "types": [
             "bar",
             "coctails",
@@ -96,7 +96,7 @@
     {
         "id": 3,
         "name": "BarThree",
-        "img": "",
+        "img": "https://cdn.theculturetrip.com/wp-content/uploads/2015/11/drinks-2578446_1280-1024x682.jpg",
         "types": [
             "bar",
             "coctails",
@@ -144,7 +144,7 @@
     {
         "id": 4,
         "name": "RestaurantOne",
-        "img": "",
+        "img": "https://justbulgaria.net/wp-content/uploads/2021/04/249_original-e1441724336118.jpg",
         "types": [
             "bar",
             "coctails",
@@ -191,7 +191,7 @@
     {
         "id": 5,
         "name": "RestaurantTwo",
-        "img": "",
+        "img": "https://justbulgaria.net/wp-content/uploads/2021/04/249_original-e1441724336118.jpg",
         "types": [
             "bar",
             "coctails",
@@ -238,7 +238,7 @@
     {
         "id": 6,
         "name": "RestaurantThree",
-        "img": "",
+        "img": "https://justbulgaria.net/wp-content/uploads/2021/04/249_original-e1441724336118.jpg",
         "types": [
             "bar",
             "coctails",
