@@ -1,9 +1,13 @@
-.establishments_list {
-    display: grid;
-    grid-template-columns: repeat(2,1fr );
-    max-width: 80%;
-    margin: auto;
+
+@media only screen and (min-width: 1024px) {
+    .establishments_list {
+        display: grid;
+        grid-template-columns: repeat(2,1fr );
+        max-width: 80%;
+        margin: auto;
+    }
 }
+
 
 @media only screen and (min-width: 1440px) {
     .establishments_list{
