@@ -1,12 +1,14 @@
 import { Establishment } from "./establishment/Establishment"
 import establishments from '../utility/establishments.json'
+import styles from './BrowsingPage.module.css'
 export const BrowsingPage = () => {
 
     return (
-        <section>
-
+        <section >
             <h1>Browsing</h1>
-            {establishments.map(est => <Establishment key={est.id} est={est} id={est.id} />)}
+            <div className={styles.establishments_list}>
+                {establishments.map(est => <Establishment key={est.id} est={est} id={est.id} />)}
+            </div>
         </section>
     )
 }

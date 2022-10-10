@@ -1,0 +1,16 @@
+.establishments_list {
+    display: grid;
+    grid-template-columns: repeat(2,1fr );
+    max-width: 80%;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1440px) {
+    .establishments_list{
+        grid-template-columns: repeat(3,380px);
+        max-width: 1500px;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+}
