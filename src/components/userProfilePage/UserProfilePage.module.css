@@ -3,3 +3,58 @@
     height: 30px;
     width: 25px;
 }
+
+.profile_page {
+    max-width: 80%;
+    margin: auto;
+}
+
+.user_picture {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.basic_info {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.basic_info p {
+    margin: 0;
+}
+
+.visited_history {
+    width: 80%;
+    margin: auto;
+}
+
+.visited_history>ol {
+    list-style: decimal-leading-zero;
+    width: fit-content;
+    margin: auto;
+}
+
+.visited_history>ol>li {
+    width: fit-content;
+}
+
+@media only screen and (min-width: 900px) {
+    .profile_page {
+        width: 900px;
+    }
+    .profile_top_section {
+        position: relative;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

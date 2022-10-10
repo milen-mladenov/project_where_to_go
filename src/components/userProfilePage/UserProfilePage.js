@@ -5,7 +5,7 @@ export const UserProfilePage = () => {
 
     const user = {
         username: "Ivan Ivanov",
-        userImg: "",
+        userImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJS324sJIJ0Hzx5TdBwWHD_7snDCzLX0FfA&usqp=CAU",
         userCountry: "Bulgaria",
         email: "ivan_ivanov@abv.bg",
         phone: "0888123456",
@@ -21,34 +21,38 @@ export const UserProfilePage = () => {
 
 
     return (
-        <section>
-            <h2>{user.username}</h2>
-            <div className={styles.user_img_section}>
-                <img src={user.userImg} />
-                <div>
-                    <p>Country:</p>
-                    <p>{user.userCountry}</p>
+        <section className={styles.profile_page}>
+            <div className={styles.profile_top_section}>
+                <div className={styles.user_img_section}>
+                    <h2 className={styles.username}>{user.username}</h2>
+                    <img className={styles.user_picture} src={user.userImg} />
+                    <div className={styles.basic_info}>
+                        <p>Country:</p>
+                        <p>{user.userCountry}</p>
+                    </div>
+                    <div className={styles.basic_info}>
+                        <p>Gender:</p>
+                        <p>{user.gender}</p>
+                    </div>
                 </div>
-                <div>
-                    <p>Gender:</p>
-                    <p>{user.gender}</p>
+                <div className={styles.details_section}>
+                    <div className={styles.details_row}>
+                        <input type="email" value={user.email} disabled />
+                        <img className={styles.redact_pencil} src={pencil} />
+                    </div>
+                    <div className={styles.details_row}>
+                        <input type="number" value={user.phone} disabled />
+                        <img className={styles.redact_pencil} src={pencil} />
+                    </div>
+
                 </div>
             </div>
-            <div className={styles.details_section}>
-                <div className={styles.details_row}>
-                    <input type="email" value={user.email} disabled />
-                    <img className={styles.redact_pencil} src={pencil} />
-                </div>
-                <div className={styles.details_row}>
-                    <input type="number" value={user.phone} disabled />
-                    <img className={styles.redact_pencil} src={pencil} />
-                </div>
-                <div>
-                    <h3>Visited history:</h3>
-                    <ol>
-                        {user.visitedHistory.map(x => <li >You visited {x.location} on {x.date} at {x.time} </li>)}
-                    </ol>
-                </div>
+
+            <div className={styles.visited_history} >
+                <h3>Visited history:</h3>
+                <ol>
+                    {user.visitedHistory.map(x => <li key={x.date + x.time} >You visited {x.location} on {x.date} at {x.time} </li>)}
+                </ol>
             </div>
         </section>
     )

@@ -26,7 +26,7 @@ export const Header = () => {
                 <div className={styles.dropdownSection} >
                     <img className={styles.dropdownMenu} onClick={dropdownState} src={naviMenu.closeMenu} />
                     <ul className={styles.dropdownOpened}>
-                        
+
                         <Link to="/"><li>Home</li></Link>
                         <Link to="/browse"><li>Browse</li></Link>
                         {isLogged ?
