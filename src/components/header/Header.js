@@ -59,11 +59,14 @@ export const Header = () => {
                     ? mobileMenuIcon
                     : <nav className={styles.navigation}>
                         <ul>
+                            {isLogged ? <div className={styles.user_welcome}>
+                                <h3>Welcome back</h3>
+                                <h3>{name}</h3>
+                            </div> : ""}
                             <Link to="/"><li>Home</li></Link>
                             <Link to="/browse"><li>Browse</li></Link>
                             {isLogged ?
                                 <div className={styles.login_section}>
-                                    <h3>Welcome back {name}</h3>
                                     <Link to="/profile"><li>Profile</li></Link>
                                     <Link to="/" onClick={statusHandler}><li>Logout</li></Link> </div> :
                                 <div className={styles.login_section}>

@@ -6,6 +6,7 @@
 .dropdownMenu {
     width: 50px;
     height: 50px;
+    margin-right: 2.5rem;
 }
 
 header {
@@ -22,34 +23,62 @@ header {
     position: absolute;
     margin: 0;
     z-index: 1;
-    left: -75%;
+    left: -69%;
     top: 75%;
+    width: 6rem;
     padding: 1.75rem;
     background-color: var(--medium_purple);
     border-bottom-left-radius: 15px;
     box-shadow: 4px 3px 4px 1px grey;
-
 }
 
 .header_content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 80%;
     margin: auto;
 }
 
 .logo_section {
     display: flex;
-    justify-content: left;
     align-items: center;
     gap: .5rem;
+    margin-left: 2.5rem;
+    color: white;
 }
 
 
 
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 900px) {
+    .header_content {
+        max-width: 1440px;
+    }
 
+    .navigation {
+        margin-right: 2.5rem;
+    }
 
+    .navigation ul,
+    ul div {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .user_welcome {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: fit-content;
+    }
+
+    .user_welcome h3 {
+        margin: 0 .75rem;
+    }
 }
