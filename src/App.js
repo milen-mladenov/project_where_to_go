@@ -7,9 +7,9 @@ import { BrowsingPage } from './components/browsingPage/BrowsingPage';
 import { UserProfilePage } from './components/userProfilePage/UserProfilePage';
 import { BusinessPage } from './components/businessPage/BusinessPage';
 import { ReservationsPage } from './components/reservationsPage/ReservationsPage';
-import { Login } from './components/userControler/Login'
-import { Register } from './components/userControler/Register'
-import { CompanyRegister } from './components/userControler/CompanyRegister'
+import { Login } from './components/userController/Login'
+import { Register } from './components/userController/Register'
+import { CompanyRegister } from './components/userController/CompanyRegister'
 
 function App() {
   return (

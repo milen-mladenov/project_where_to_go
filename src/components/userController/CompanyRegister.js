@@ -1,4 +1,4 @@
-import styles from './Controler.module.css'
+import styles from './Controller.module.css'
 
 export const CompanyRegister = () => {
     return (

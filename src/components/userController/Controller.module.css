@@ -1,0 +1,62 @@
+.login_section, .registration_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    margin: 5rem auto;
+    width: 25%;
+    background-color: var(--light_purple);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0;
+}
+.login_section > p,.registration_section > p {
+    font-size: 1.25rem;
+}
+.login_section > p > a,.registration_section > p > a {
+    text-decoration: underline;
+}
+.login_form, .registration_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.login_form label, .registration_section label {
+    font-size: 1.5rem;
+}
+.form_input_data {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 50%;
+}
+
+.form_btn {
+    width: fit-content;
+    padding: 1rem;
+    right: 0;
+    width: 25%;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.login_form button:hover {
+    box-shadow: 0 0 8px 0;
+}
+
+.registration_terms_and_cond {
+    display: flex;
+    align-items: flex-start;
+}
+
+.registration_terms_and_cond > p {
+    margin: 0;
+}
+
+.form_title {
+    margin-top: 0;
+    font-size: 36px;
+}
