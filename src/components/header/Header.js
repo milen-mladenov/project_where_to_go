@@ -60,10 +60,10 @@ export const Header = () => {
                     ? mobileMenuIcon
                     : <nav className={styles.navigation}>
                         <ul>
-                            {isLogged ? <div className={styles.user_welcome}>
+                            {/* {isLogged ? <div className={styles.user_welcome}>
                                 <h3>Welcome back</h3>
                                 <h3>{name}</h3>
-                            </div> : ""}
+                            </div> : ""} */}
                             <Link to="/"><li>Home</li></Link>
                             <Link to="/browse"><li>Browse</li></Link>
                             {isLogged ?

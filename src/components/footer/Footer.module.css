@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--medium_purple);
+    margin-top: auto;
+    height: 4rem;
+}
+
+.footer_left p{
+    color: white;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
