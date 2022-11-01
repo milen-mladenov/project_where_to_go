@@ -1,5 +1,6 @@
 import styles from './UserProfilePage.module.css'
 import pencil from '../utility/svg/redact_pencil.svg'
+import { NavList } from './navListItems/NavList'
 
 export const UserProfilePage = () => {
 
@@ -18,23 +19,53 @@ export const UserProfilePage = () => {
         ],
         comments: []
     }
-
+    const navigation = [{
+        name: 'Settings',
+        img: '',
+        destination: '/profile/settings'
+    }, {
+        name: 'Photos',
+        img: '',
+        destination: '/profile/photos'
+    }, {
+        name: 'Reviews',
+        img: '',
+        destination: '/profile/reviews'
+    }, {
+        name: 'Visited',
+        img: '',
+        destination: '/profile/visited'
+    }, {
+        name: 'Comments',
+        img: '',
+        destination: '/profile/comments'
+    }]
 
     return (
         <section className={styles.profile_page}>
-            <div className={styles.profile_top_section}>
-                <div className={styles.user_img_section}>
-                    <h2 className={styles.username}>{user.username}</h2>
-                    <img className={styles.user_picture} src={user.userImg} />
-                    <div className={styles.basic_info}>
-                        <p>Country:</p>
-                        <p>{user.userCountry}</p>
-                    </div>
-                    <div className={styles.basic_info}>
-                        <p>Gender:</p>
-                        <p>{user.gender}</p>
+            <section className={styles.profile_navigation_section}>
+                <div className={styles.profile_top_section}>
+                    <div className={styles.user_img_section}>
+                        <h2 className={styles.username}>{user.username}</h2>
+                        <img className={styles.user_picture} src={user.userImg} />
+                        <div className={styles.basic_info}>
+                            <p>Country:</p>
+                            <p>{user.userCountry}</p>
+                        </div>
+                        <div className={styles.basic_info}>
+                            <p>Gender:</p>
+                            <p>{user.gender}</p>
+                        </div>
                     </div>
                 </div>
+                <nav>
+                    <ul className={styles.profile_navigation}>
+                        {navigation.map(n => <NavList key={n.name} details={n} />)}
+                    </ul>
+                </nav>
+            </section>
+            <section className={styles.profile_content}>
+
                 <div className={styles.details_section}>
                     <div className={styles.details_row}>
                         <input type="email" value={user.email} disabled />
@@ -46,14 +77,13 @@ export const UserProfilePage = () => {
                     </div>
 
                 </div>
-            </div>
-
-            <div className={styles.visited_history} >
-                <h3>Visited history:</h3>
-                <ol>
-                    {user.visitedHistory.map(x => <li key={x.date + x.time} >You visited {x.location} on {x.date} at {x.time} </li>)}
-                </ol>
-            </div>
+                <div className={styles.visited_history} >
+                    <h3>Visited history:</h3>
+                    <ol>
+                        {user.visitedHistory.map(x => <li key={x.date + x.time} >You visited {x.location} on {x.date} at {x.time} </li>)}
+                    </ol>
+                </div>
+            </section>
         </section>
     )
 }
