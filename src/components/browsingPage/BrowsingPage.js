@@ -1,5 +1,5 @@
 import { Establishment } from "./establishment/Establishment"
-import establishments from '../utility/establishments.json'
+import establishments from '../../utility/establishments.json'
 import styles from './BrowsingPage.module.css'
 export const BrowsingPage = () => {
 

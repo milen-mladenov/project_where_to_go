@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 
-import logo from '../utility/svg/fork_knife_logo.svg'
+import logo from '../../utility/svg/fork_knife_logo.svg'
 import styles from './Header.module.css'
-import { naviMenu } from "../utility/images"
+import { naviMenu } from "../../utility/images"
 
 export const Header = () => {
     const [isLogged, setIsLogged] = useState(true)
@@ -14,8 +14,6 @@ export const Header = () => {
         setWindowWidth(window.screen.width)
     }, [windowWidth])
 
-    const name = "UserName"
-
     function statusHandler() {
         setIsLogged(!isLogged)
     }
@@ -24,7 +22,7 @@ export const Header = () => {
         (<>
             {dropdown ?
                 <div className={styles.dropdownSection} >
-                    <img className={styles.dropdownMenu} onClick={dropdownState} src={naviMenu.closeMenu} />
+                    <img className={styles.dropdownMenu} onClick={dropdownState} src={naviMenu.closeMenu} alt="img" />
                     <ul className={styles.dropdownOpened}>
 
                         <Link to="/"><li>Home</li></Link>
@@ -40,7 +38,7 @@ export const Header = () => {
                         }
                     </ul>
                 </div> :
-                <div className={styles.dropdownSection}> <img className={styles.dropdownMenu} onClick={dropdownState} src={naviMenu.openMenu} /> </div>}
+                <div className={styles.dropdownSection}> <img className={styles.dropdownMenu} onClick={dropdownState} src={naviMenu.openMenu} alt="img"/> </div>}
         </>)
 
     function dropdownState() {
@@ -53,7 +51,7 @@ export const Header = () => {
                 <Link to="/">
                     <div className={styles.logo_section}>
                         {windowWidth < 400 ? <h2 className={styles.name}>WTG</h2> : <h2 className={styles.name}>WhereToGo</h2>}
-                        <img className={styles.logo} src={logo} />
+                        <img className={styles.logo} src={logo} alt="img"/>
                     </div>
                 </Link>
                 {windowWidth < 900

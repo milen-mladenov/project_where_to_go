@@ -1,5 +1,5 @@
 import styles from './navLayouts.module.css'
-import pencil from '../utility/svg/redact_pencil.svg'
+import pencil from '../../utility/svg/redact_pencil.svg'
 
 export const SettingsPage = () => {
 
