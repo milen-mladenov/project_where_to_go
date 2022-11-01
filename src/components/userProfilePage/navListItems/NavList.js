@@ -1,14 +1,16 @@
 import styles from '../UserProfilePage.module.css'
-
+import { Link } from 'react-router-dom'
+import { userNav } from '../../utility/images'
 export const NavList = ({ details }) => {
+
     return (
         <li className={styles.nav_list_item}>
-            <a href={details.destination}>
-                <img src={details.img} alt={details.name + 'img'} />
+            <Link href={details.destination}>
+                <img className={styles.nav_img} src={userNav[details.img]} alt={details.name + 'img'} />
                 <p>
                     {details.name}
                 </p>
-            </a>
+            </Link>
         </li>
     )
 } 

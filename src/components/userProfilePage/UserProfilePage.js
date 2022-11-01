@@ -19,25 +19,26 @@ export const UserProfilePage = () => {
         ],
         comments: []
     }
+
     const navigation = [{
         name: 'Settings',
-        img: '',
+        img: 'settings',
         destination: '/profile/settings'
     }, {
         name: 'Photos',
-        img: '',
+        img: 'picture',
         destination: '/profile/photos'
     }, {
         name: 'Reviews',
-        img: '',
+        img: 'notepad',
         destination: '/profile/reviews'
     }, {
         name: 'Visited',
-        img: '',
+        img: 'checkmarkHouse',
         destination: '/profile/visited'
     }, {
         name: 'Comments',
-        img: '',
+        img: 'comments',
         destination: '/profile/comments'
     }]
 
