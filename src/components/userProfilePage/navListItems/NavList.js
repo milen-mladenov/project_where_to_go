@@ -5,7 +5,7 @@ export const NavList = ({ details }) => {
 
     return (
         <li className={styles.nav_list_item}>
-            <Link href={details.destination}>
+            <Link to={details.destination}>
                 <img className={styles.nav_img} src={userNav[details.img]} alt={details.name + 'img'} />
                 <p>
                     {details.name}

@@ -1,6 +1,8 @@
 :root {
   --medium_purple: #9147FF;
   --light_purple: #bf95ff;
+
+  box-sizing: border-box;
 }
 
 .App {
@@ -8,6 +10,7 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
 body {
   min-height: 100vh;
   margin: 0;

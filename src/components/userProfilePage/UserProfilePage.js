@@ -1,6 +1,8 @@
 import styles from './UserProfilePage.module.css'
-import pencil from '../utility/svg/redact_pencil.svg'
+
 import { NavList } from './navListItems/NavList'
+import { Outlet } from 'react-router-dom'
+
 
 export const UserProfilePage = () => {
 
@@ -66,24 +68,7 @@ export const UserProfilePage = () => {
                 </nav>
             </section>
             <section className={styles.profile_content}>
-
-                <div className={styles.details_section}>
-                    <div className={styles.details_row}>
-                        <input type="email" value={user.email} disabled />
-                        <img className={styles.redact_pencil} src={pencil} />
-                    </div>
-                    <div className={styles.details_row}>
-                        <input type="number" value={user.phone} disabled />
-                        <img className={styles.redact_pencil} src={pencil} />
-                    </div>
-
-                </div>
-                <div className={styles.visited_history} >
-                    <h3>Visited history:</h3>
-                    <ol>
-                        {user.visitedHistory.map(x => <li key={x.date + x.time} >You visited {x.location} on {x.date} at {x.time} </li>)}
-                    </ol>
-                </div>
+                <Outlet />
             </section>
         </section>
     )
