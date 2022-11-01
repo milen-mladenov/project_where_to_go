@@ -1,5 +1,5 @@
-import styles from '../UserProfilePage.module.css'
-import pencil from '../../utility/svg/redact_pencil.svg'
+import styles from './navLayouts.module.css'
+import pencil from '../utility/svg/redact_pencil.svg'
 
 export const SettingsPage = () => {
 
@@ -23,11 +23,11 @@ export const SettingsPage = () => {
         <div className={styles.details_section}>
             <div className={styles.details_row}>
                 <input type="email" value={user.email} disabled />
-                <img className={styles.redact_pencil} src={pencil} />
+                <img className={styles.redact_pencil} src={pencil} alt="pencil" />
             </div>
             <div className={styles.details_row}>
                 <input type="number" value={user.phone} disabled />
-                <img className={styles.redact_pencil} src={pencil} />
+                <img className={styles.redact_pencil} src={pencil} alt="pencil" />
             </div>
 
         </div>

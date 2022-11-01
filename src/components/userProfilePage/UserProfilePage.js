@@ -50,7 +50,7 @@ export const UserProfilePage = () => {
                 <div className={styles.profile_top_section}>
                     <div className={styles.user_img_section}>
                         <h2 className={styles.username}>{user.username}</h2>
-                        <img className={styles.user_picture} src={user.userImg} />
+                        <img className={styles.user_picture} src={user.userImg} alt="user" />
                         <div className={styles.basic_info}>
                             <p>Country:</p>
                             <p>{user.userCountry}</p>

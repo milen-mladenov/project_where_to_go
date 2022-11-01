@@ -10,11 +10,11 @@ import { ReservationsPage } from './components/reservationsPage/ReservationsPage
 import { Login } from './components/userController/Login'
 import { Register } from './components/userController/Register'
 import { CompanyRegister } from './components/userController/CompanyRegister'
-import { VisitedPage } from './components/userProfilePage/navLayouts/VisitedPage'
-import { CommentsPage } from './components/userProfilePage/navLayouts/CommentsPage'
-import { PhotosPage } from './components/userProfilePage/navLayouts/PhotosPage'
-import { ReviewsPage } from './components/userProfilePage/navLayouts/ReviewsPage'
-import { SettingsPage } from './components/userProfilePage/navLayouts/SettingsPage'
+import { VisitedPage } from './components/navLayouts/VisitedPage'
+import { CommentsPage } from './components/navLayouts/CommentsPage'
+import { PhotosPage } from './components/navLayouts/PhotosPage'
+import { ReviewsPage } from './components/navLayouts/ReviewsPage'
+import { SettingsPage } from './components/navLayouts/SettingsPage'
 
 
 function App() {

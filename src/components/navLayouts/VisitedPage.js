@@ -1,4 +1,4 @@
-import styles from '../UserProfilePage.module.css'
+import styles from './navLayouts.module.css'
 
 export const VisitedPage = () => {
 

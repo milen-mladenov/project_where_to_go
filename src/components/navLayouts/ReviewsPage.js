@@ -1,3 +1,6 @@
+import styles from './navLayouts.module.css'
+
+
 export const ReviewsPage = () => {
     return (
         <div>
