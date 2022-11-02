@@ -25,18 +25,18 @@
 }
 
 .targeted_img {
-
     max-width: 90%;
     max-height: 55rem;
 }
 
 .picture_list ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
 }
 
 .picture_list img {
+    cursor: pointer;
     width: 300px;
     height: 300px;
 }

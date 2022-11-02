@@ -7,6 +7,7 @@
 .profile_page {
     display: flex;
     margin: auto;
+    justify-content: flex-end;
 }
 
 .user_picture {
@@ -16,11 +17,15 @@
 }
 
 .profile_navigation_section {
+    position: fixed;
+    z-index: 777;
     display: flex;
     flex-direction: column;
     background-color: gray;
     padding: 1rem;
-    height: 85.45vh;
+    /* height: 85.45vh; */
+    height: 100vh;
+    left: 0;
 }
 
 .profile_navigation {
@@ -29,6 +34,7 @@
     background-color: gray;
     gap: .5rem;
     padding: 0;
+    width: 15%;
 }
 
 .nav_img {
@@ -42,6 +48,7 @@
 }
 
 .nav_list_item>a {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -50,6 +57,13 @@
 
 
 .profile_content {
+    position: inherit;
+    width: 88.5%;
+}
+
+.profile_content>section {
+    position: relative;
+    right: 0;
     margin: auto;
 }
 
@@ -86,13 +100,12 @@
 
 @media only screen and (min-width: 900px) {
     .profile_page {
-        width: 100vw;
+        width: 99vw;
     }
 
     .profile_top_section {
         position: relative;
         display: flex;
-        margin: auto;
         align-items: center;
         justify-content: space-around;
     }

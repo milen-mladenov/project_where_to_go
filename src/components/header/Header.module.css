@@ -25,9 +25,12 @@ header ul >a > li,header ul > div > a > li {
 }
 
 header {
+    position: sticky;
+    z-index: 999;
     background-color: var(--medium_purple);
     font-size: 1.25rem;
     box-shadow: 0 3px 4px 1px grey;
+    top: 0;
 }
 
 .dropdownSection {
@@ -37,7 +40,7 @@ header {
 .dropdownOpened {
     position: absolute;
     margin: 0;
-    z-index: 1;
+    z-index: 999;
     left: -69%;
     top: 75%;
     width: 6rem;

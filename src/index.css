@@ -3,6 +3,7 @@
   --light_purple: #bf95ff;
 
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .App {
