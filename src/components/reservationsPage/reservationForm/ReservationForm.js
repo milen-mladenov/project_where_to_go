@@ -6,7 +6,8 @@ import { StageTwo } from './stages/StageTwo'
 import { StageOne } from './stages/StageOne'
 
 export const ReservationForm = ({ handleState }) => {
-    const [stage, setStage] = useState(1)
+    const [stage, setStage] = useState(1);
+    const [reservation, setReservation] = useState({})
 
     function nextStage() {
         setStage(stage + 1)
@@ -21,7 +22,16 @@ export const ReservationForm = ({ handleState }) => {
     }
 
     function resHandler(data) {
-        console.log('register items');
+
+        let name = data[0];
+        let value = data[1];
+
+        setReservation(old => ({ ...old, [name]: value }))
+
+    }
+
+    function test() {
+        console.log(reservation);
     }
 
     return (
@@ -37,7 +47,7 @@ export const ReservationForm = ({ handleState }) => {
             {stage == 2 && < StageTwo nextStage={nextStage} prevStage={prevStage} resHandler={resHandler} />}
             {stage == 3 && < StageThree nextStage={nextStage} prevStage={prevStage} resHandler={resHandler} />}
             {stage == 4 && < StageFour prevStage={prevStage} resHandler={resHandler} />}
-
+            <button onClick={() => test()}>TEST</button>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import styles from './StageOne.module.css';
 
-export const StageOne = ({nextStage}) => {
+export const StageOne = ({ nextStage, resHandler }) => {
     return (
         <div>
             <h2>StageOne</h2>
