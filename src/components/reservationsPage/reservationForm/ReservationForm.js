@@ -1,18 +1,43 @@
+import { useState } from 'react'
 import styles from './ReservationForm.module.css'
-
+import { StageFour } from './stages/StageFour'
+import { StageThree } from './stages/StageThree'
+import { StageTwo } from './stages/StageTwo'
+import { StageOne } from './stages/StageOne'
 
 export const ReservationForm = ({ handleState }) => {
+    const [stage, setStage] = useState(1)
 
+    function nextStage() {
+        setStage(stage + 1)
+    }
+
+    function prevStage() {
+        setStage(stage - 1)
+    }
+
+    function getStage(num) {
+        setStage(num)
+    }
+
+    function resHandler(data) {
+        console.log('register items');
+    }
 
     return (
         <section className={styles.reservations_section}>
             <button className={styles.close_btn} onClick={() => handleState()}>X</button>
-            <form className={styles.reservation_form}>
-                <label htmlFor="month">Month: <input id="month" name="month" type="text" /></label>
-                <label htmlFor="date">Date: <input id="date" name="date" type="text" /></label>
-                <label htmlFor="time">Time: <input id="time" name="time" type="text" /></label>
-                <button>Create Reservation</button>
-            </form>
+            <div>
+                <button onClick={() => getStage(1)}>1</button>
+                <button onClick={() => getStage(2)}>2</button>
+                <button onClick={() => getStage(3)}>3</button>
+                <button onClick={() => getStage(4)}>4</button>
+            </div>
+            {stage == 1 && < StageOne nextStage={nextStage} resHandler={resHandler} />}
+            {stage == 2 && < StageTwo nextStage={nextStage} prevStage={prevStage} resHandler={resHandler} />}
+            {stage == 3 && < StageThree nextStage={nextStage} prevStage={prevStage} resHandler={resHandler} />}
+            {stage == 4 && < StageFour prevStage={prevStage} resHandler={resHandler} />}
+
         </section>
     )
 }

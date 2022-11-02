@@ -14,7 +14,6 @@ export const ReservationsPage = ({ location }) => {
         setReserv(!reserve)
     }
 
-
     return (
         <>
             <div className={styles.reservations_content}>
