@@ -1,0 +1,42 @@
+.main_picture_frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+    height: 55rem;
+    width: 80rem;
+}
+
+.picture_directions_left,
+.picture_directions_right {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.picture_directions_left {
+    left: 0;
+}
+
+.picture_directions_right {
+    right: 0;
+}
+
+.targeted_img {
+
+    max-width: 90%;
+    max-height: 55rem;
+}
+
+.picture_list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.picture_list img {
+    width: 300px;
+    height: 300px;
+}
