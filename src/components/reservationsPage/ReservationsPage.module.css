@@ -1,0 +1,27 @@
+.reservation_name_sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 2.5rem;
+}
+
+.reservation_img {
+    width: 300px;
+    height: 300px;
+}
+
+.reservations_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.reservations_menu {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: gray;
+    width: 50%;
+    margin: auto;
+}

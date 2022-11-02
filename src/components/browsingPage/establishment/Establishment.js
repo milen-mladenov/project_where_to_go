@@ -6,7 +6,6 @@ export const Establishment = ({ est, id, handler }) => {
 
     function clickHandler() {
         handler(est)
-        console.log(est);
     }
     return (
         <article className={styles.establishment_article}>
