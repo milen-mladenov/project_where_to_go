@@ -1,9 +1,13 @@
 import styles from './Establishment.module.css'
 import { Link } from 'react-router-dom';
-export const Establishment = ({ est, id }) => {
+export const Establishment = ({ est, id, handler }) => {
     const status = true;
     // add calculation to check if the current status is open or closed based on the working hours and current time
 
+    function clickHandler() {
+        handler(est)
+        console.log(est);
+    }
     return (
         <article className={styles.establishment_article}>
             <div className={styles.name_img_section}>
@@ -30,7 +34,7 @@ export const Establishment = ({ est, id }) => {
                     <h3 className={styles.closed}>Closed</h3>
                 }
             </div>
-            <Link className={styles.reservation_link} to={`/reservations/${id}`}>Make reservation...</Link>
+            <Link onClick={clickHandler} className={styles.reservation_link} to={`/reservations/${id}`}>Make reservation...</Link>
         </article>
     )
 }

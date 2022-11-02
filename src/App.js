@@ -15,9 +15,18 @@ import { CommentsPage } from './components/navLayouts/CommentsPage'
 import { PhotosPage } from './components/navLayouts/PhotosPage'
 import { ReviewsPage } from './components/navLayouts/ReviewsPage'
 import { SettingsPage } from './components/navLayouts/SettingsPage'
+import { useState } from 'react';
+import { UserReservations } from './components/navLayouts/UserReservations';
 
 
 function App() {
+
+  const [currEst, setCurrEst] = useState({})
+
+
+  function estHandler(data) {
+    setCurrEst(data)
+  }
   return (
     <div className="App">
       <Header />
@@ -27,16 +36,17 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/company-register' element={<CompanyRegister />} />
-          <Route path='/browse' element={<BrowsingPage />} />
+          <Route path='/browse' element={<BrowsingPage handler={estHandler} />} />
           <Route path='/profile' element={<UserProfilePage />}>
             <Route path='settings' element={<SettingsPage />} />
             <Route path='visited' element={<VisitedPage />} />
             <Route path='comments' element={<CommentsPage />} />
             <Route path='photos' element={<PhotosPage />} />
             <Route path='reviews' element={<ReviewsPage />} />
+            <Route path='reservations' element={<UserReservations />} />
           </Route>
           <Route path='/business' element={<BusinessPage />} />
-          <Route path='/reservations/:id' element={<ReservationsPage />} />
+          <Route path='/reservations/:id' element={<ReservationsPage location={currEst} />} />
         </Routes>
       </main>
       <Footer />

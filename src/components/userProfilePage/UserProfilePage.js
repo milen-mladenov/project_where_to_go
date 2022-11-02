@@ -27,6 +27,10 @@ export const UserProfilePage = () => {
         img: 'settings',
         destination: '/profile/settings'
     }, {
+        name: 'Reservations',
+        img: 'calendar',
+        destination: '/profile/reservations'
+    }, {
         name: 'Photos',
         img: 'picture',
         destination: '/profile/photos'

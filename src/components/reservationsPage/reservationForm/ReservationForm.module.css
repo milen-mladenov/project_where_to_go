@@ -1,0 +1,41 @@
+.reservations_section {
+    position: absolute;
+    z-index: 777;
+    width: 25%;
+    height: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: bisque;
+    padding: 2rem;
+}
+
+.reservation_form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .reservation_form label {
+    width: 20%;
+} */
+
+.reservation_form input {
+    width: 80%;
+}
+
+
+.close_btn {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    right: -20px;
+    padding: .75rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 3px -1px 11px -1px grey
+}

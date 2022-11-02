@@ -5,7 +5,7 @@ import picture from './svg/picture.svg'
 import notepad from './svg/notepad.svg'
 import comments from './svg/comments.svg'
 import checkmarkHouse from './svg/checkmarkHouse.svg'
-
+import calendar from './svg/calendar.svg'
 
 export const naviMenu = {
     openMenu,
@@ -18,7 +18,8 @@ export const userNav = {
     picture,
     notepad,
     comments,
-    checkmarkHouse
+    checkmarkHouse,
+    calendar
 }
 
 export const images = [
